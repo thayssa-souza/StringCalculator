@@ -8,8 +8,11 @@
                 return 0;
 
             var partsOfNumbers = numbers.Split(',');
+            
             var exceedsCount = partsOfNumbers.Length > 2;
+            
             var consecutiveCommas = partsOfNumbers.Any(x => x == "");
+            
             var nonNumbers = partsOfNumbers.Any(x => !int.TryParse(x, out _));
 
             if (exceedsCount || consecutiveCommas || nonNumbers)

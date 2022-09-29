@@ -8,6 +8,7 @@ namespace StringCalculatorUnitTests
         public void Add_WhenEmptyString_ShouldReturnZero()
         {
             var sut = new Domain.StringCalculator();
+            
             var result = sut.Add(null);
 
             result.Should().Be(0);
@@ -48,6 +49,7 @@ namespace StringCalculatorUnitTests
         public void Add_WhenValidInput_ReturnsSum()
         {
             var sut = new Domain.StringCalculator();
+            
             var result = sut.Add("1,3");
 
             result.Should().Be(4);
